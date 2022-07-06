@@ -1,12 +1,28 @@
-class Game {
-  constructor()
+
+
+class Game{
+  constructor(name, age, food, sleep, boredom){
+  this.name = name;
+  this.age = 0;
+  this.hunger = hunger;
+  this.sleep = sleep;
+  this.boredom = boredom;
 }
 
-class Tamagotchi {
-  constructor(name, age, food, sleep, fun)
-  this.name = name
-  this.age = 0
-  this.food = 1
-  this.sleep = 1
-  this.boredom = 1  
+feed(){
+
+}
+
+nap(){
+
+}
+
+play(){
+  
+}
+}
+toggle
+
+if (lightsOff === true){
+  `${tamagotchi.name} is a sleep!`
 }
