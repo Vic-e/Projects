@@ -45,7 +45,12 @@ class Game{
 const startBtn = document.querySelector("#start")
 const feedBtn = document.querySelector("#feed")
 const playBtn = document.querySelector("#play")
+const resetBtn = document.querySelector("#startOver")
 //start Over
+resetBtn.addEventListener("click",()=>{
+  location.reload();
+}
+)
 
 //new name given by player
 const pet = new Game("", 0, 0, 0, 0)
@@ -58,6 +63,7 @@ function nameYourPet(){
 
 startBtn.addEventListener("click",()=>{
     alert("If your pet hunger, boredom, sleep goes to 10 you lose the game.")
+    changeLight();
     nameYourPet();
     hatch();
     itAge();
@@ -93,7 +99,7 @@ function itHunger(){
      const eatNo = document.querySelector("#hunger");
      eatNo.innerHTML = `Hunger: ${pet.hunger}`;
     }
-  , 5000)
+  , 10000)
 }
 
 feedBtn.addEventListener("click",() => {
@@ -109,7 +115,7 @@ function itBoredom(){
      const boredomNo = document.querySelector("#boredom");
      boredomNo.innerHTML = `Boredom: ${pet.boredom}`;
     }
-  , 5000)
+  , 10000)
 }
 
 playBtn.addEventListener("click",() => {
@@ -126,7 +132,7 @@ function itSleep(){
      sleepyNo.innerHTML = `Sleepiness: ${pet.sleep}`;
      pet.unAlive();
     }
-  , 5000)
+  , 10000)
 }
 
 
@@ -145,14 +151,13 @@ function changeLight(){
        }
        else{
             document.querySelector(".sceneLights").style.backgroundImage = "url(images/1795.jpg)";
-            pet.nap();
             const sleepNo = document.querySelector('#sleepiness');
-            sleepNo.innerHTML = `Sleepiness: ${pet.sleepiness}`;
+            sleepNo.innerHTML = `Sleepiness: ${pet.sleep}`;
             document.querySelector(".cutiePie").src = "images/unicattus-happy.png"
        }
 }
 
-console.log(changeLight())
+//console.log(changeLight())
 
 //function resetGame(){
   // stop the clock clearInterval()
