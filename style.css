@@ -1,3 +1,87 @@
-*{
-  background-color: #E6E6FA;
+html{
+  background-color: #80c3b0;
+  font-family: sans-serif;
+  width: 100%;
+  background-image:url("images/donut-bg.png");
+  display: block;
+  background-repeat: repeat;
+  }
+
+body{
+  margin: 0 auto;
+  width: 60%;
+  padding: 100px;
+}
+
+#container{
+  background-color: #ffffff;
+  margin: 0 auto;
+  width: 100%;
+  padding: 10px 50px;
+
+}
+
+#legend{
+  margin: 0 auto;
+  padding: 20px;
+  width: 80%;
+  border: solid #000000;
+  border-radius: 10px;
+  background: rgb(167,36,76);
+  background: linear-gradient(0deg, rgba(167,36,76,1) 0%, rgba(248,80,132,1) 60%, rgba(247,107,151,1) 100%);
+  font-family: Quicksand;
+  color: white;
+}
+
+li{
+  list-style: none;
+  font-size: 20px;
+}
+
+section{
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    margin: 20px 0 20px;
+    position: relative;
+}
+
+button{
+  background-color: #f85084;
+  border: #000000;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 5px;
+  text-align: center;
+  padding: 6px;
+  font-size: 15px;
+  color: #ffffff;
+  margin: 0 10px 0 0;
+  font-family: Quicksand;
+}
+
+#manyButtons{
+margin: 30px auto;
+width: 70%;
+padding: 0 50px 0;
+display: flex;
+justify-content: center;
+}
+
+#pet{
+  background: none;
+  width: 200px;
+  position: absolute;
+  bottom: 0;
+  animation: moving 5s infinite;
+}
+
+@keyframes moving {
+  from {right: 10px;}
+  to   {right: 30px;}
+}
+
+footer {
+   height: 100px;
 }

@@ -2,18 +2,41 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <script src="app.js" charset="utf-8"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
     <title>Tamagotchi-UniCattus</title>
   </head>
   <body>
-<h1> UniCattus</h1>
-<p> UniCattus come from a land far, far away. One day a baby UniCattus mysteriously
-  landed on your door step. It needs your help!!! Follow the instructions to keep it safe!
-  </p>
-    <button type="button" name="feed">Feed</button>
-      <button type="button" name="play">Play</button>
-        <button type="button" name="lights">Toggle the Lights</button>
-      <button type="reset" name="startOver">Start Over</button>
+    <div id="container">
+      <h1 style="text-align:center; font-family:Quicksand; font-size:4em;"> UniCattus</h1>
+    <p style="text-align:center;"> UniCattus come from a land far, far away. One day a baby UniCattus mysteriously
+      landed on your door step. It needs your help!!! Follow the instructions to keep it safe!
+    </p>
+    <div id="legend">
+    <p style="text-align:center; font-size:3em; line-height:10px">Hi, My Name Is:<p>
+      <p id="name" style="text-align:center; font-size:3em; line-height:10px"></p>
+      <ul>
+      <li id="age">Age: </li>
+      <li id="hunger">Hunger: </li>
+      <li id="sleepiness">Sleepiness: </li>
+      <li id="boredom">Boredom: </li>
+      </ul>
+    </div>
+    <div id="manyButtons">
+        <button type="button" name="start" id="start">Hatch</button>
+        <button type="button" name="feed" id="feed">Feed</button>
+        <button type="button" name="play" id="play">Play</button>
+        <button onclick="changeLight()" class="lightsOff" type="button" name="lights">Toggle the Lights</button>
+  </div>
+  <section id="changeling" class="sceneLights">
+    <img id="pet" class="cutiePie" src="images/unicattus-eating.png" alt="UttiCatus">
+  </section>
+  <footer>
+    <p style="text-align:right;"> Image Attribution: <a href="https://www.freepik.com/vectors/cute-food">Cute food vector created by freepik - www.freepik.com</a></p>
+  </footer>
+</div>
   </body>
+      <script src="app.js" charset="utf-8"></script>
 </html>
